@@ -4,8 +4,8 @@
 
 require('@babel/register');
 
-var IgnorePlugin = require('webpack').IgnorePlugin;
-var is = require('./packages/enzyme-test-suite/build/_helpers/version').is;
+let IgnorePlugin = require('webpack').IgnorePlugin;
+let is = require('./packages/enzyme-test-suite/build/_helpers/version').is;
 
 function getPlugins() {
   const adapter13 = new IgnorePlugin(/enzyme-adapter-react-13$/);
@@ -17,7 +17,7 @@ function getPlugins() {
   const adapter163 = new IgnorePlugin(/enzyme-adapter-react-16.3$/);
   const adapter16 = new IgnorePlugin(/enzyme-adapter-react-16$/);
 
-  var plugins = [
+  let plugins = [
     adapter13,
     adapter14,
     adapter154,
